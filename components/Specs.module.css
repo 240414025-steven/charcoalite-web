@@ -1,0 +1,33 @@
+.specContainer {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background: #1a1a1a; /* Slightly lighter than pure black */
+  border: 1px solid #333;
+}
+
+.table th,
+.table td {
+  padding: 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.table th {
+  color: #ff4d00; /* Our Ember Orange */
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.value {
+  font-family: "Courier New", Courier, monospace; /* Industrial feel */
+  font-weight: bold;
+  color: #fff;
+}
