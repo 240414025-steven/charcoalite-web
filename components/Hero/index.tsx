@@ -22,14 +22,14 @@ export default function Hero() {
       </p>
       <div className={styles.buttonList}>
         <button className={styles.ctaButton}>About</button>
-        <button className={styles.ctaButton}>Get a Quote</button>
-        <button className={styles.ctaButton}>Get a Quote</button>
+        <button className={styles.ctaButton}>Contact</button>
+        <button className={styles.ctaButton}>Pricelist</button>
       </div>
       <div className={styles.imgWrapper}>
         <Image
-          src="/public/hero-bg.png"
+          src="/hero-bg.png"
           width={600}
-          height={600}
+          height={800}
           alt="Hero Image"
           priority
           className={styles.heroImage}
