@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Specs from "@/components/Specs.module";
 
 export default function Home() {
   return (

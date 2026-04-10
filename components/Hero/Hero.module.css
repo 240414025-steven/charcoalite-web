@@ -1,35 +1,67 @@
 .heroWrapper {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: 100vh;
+  display: grid;
+  /* Split the screen: 60% for text, 40% for the image */
+  grid-template-columns: 1.5fr 1fr;
   align-items: center;
-  text-align: center;
-  padding: 20px;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/hero-bg.jpg");
-  background-size: cover;
+  gap: 40px;
+  padding: 5% 10%;
+  background-color: var(--charcoal-black);
 }
 
 .title {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  grid-column: 1;
+  text-align: left;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   color: white;
+  text-transform: uppercase;
+}
+
+.title span {
+  color: var(--ember-orange);
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  grid-column: 1;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.8;
   color: var(--text-muted);
-  max-width: 600px;
-  margin-bottom: 2rem;
+  margin: 1.5rem 0;
+}
+
+.buttonList {
+  grid-column: 1;
+  display: flex;
+  gap: 15px;
 }
 
 .ctaButton {
   background-color: var(--ember-orange);
+  border: 1px solid var(--ember-orange);
   color: white;
-  padding: 1rem 2rem;
-  border: none;
+  padding: 0.8rem 2rem;
   font-weight: bold;
   cursor: pointer;
-  text-transform: uppercase;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.imgWrapper {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.productImg {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
 }
