@@ -1,11 +1,11 @@
 import Hero from "@/components/Hero";
-import Specs from "@/components/Specs.module";
+import Story from "@/components/Story";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Specs />
+      <Story />
       {/* Other sections like "Product Features" will go here next */}
     </main>
   );

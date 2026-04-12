@@ -1,9 +1,15 @@
 /* src/app/globals.css */
 :root {
+  /* Color Palette */
   --charcoal-black: #121212;
   --ash-grey: #f5f5f5;
   --ember-orange: #ff4d00;
   --text-muted: #a0a0a0;
+
+  /* Font Variables */
+  --font-main: var(--font-dm-sans), sans-serif;
+  --font-display: var(--font-horizon), sans-serif;
+  --font-accent: var(--font-bebas), sans-serif;
 }
 
 * {
@@ -12,9 +18,20 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--charcoal-black);
   color: white;
-  font-family: Arial, sans-serif; /* We can change this later */
+  font-family: var(--font-main);
   line-height: 1.6;
+}
+
+button,
+.btn {
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }

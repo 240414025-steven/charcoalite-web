@@ -1,0 +1,147 @@
+.sectionWrapper {
+  width: 100%;
+}
+
+.splitBlock {
+  display: grid;
+  grid-template-columns: 400px 1fr; /* Balanced image-to-text ratio */
+  height: 400px; /* Consistent height for a premium feel */
+  overflow: hidden;
+}
+
+.reverseBlock {
+  grid-template-columns: 1fr 400px;
+}
+
+.lightBg {
+  background-color: var(--ash-grey);
+  color: #000;
+}
+
+.darkBg {
+  background-color: #0a0a0a; /* Slightly deeper than global for contrast */
+  color: #fff;
+}
+
+.imageContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transform: scale(1.1); /* Subtle zoom for depth */
+  transition: transform 0.6s ease;
+}
+
+.splitBlock:hover .image {
+  transform: scale(1.15); /* Smooth hover effect */
+}
+
+.textContent {
+  padding: 60px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-family: var(--font-display); /* Using Horizon */
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  line-height: 0.9;
+}
+
+.paragraph {
+  font-family: var(--font-main); /* Using DM Sans */
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 650px;
+  opacity: 0.9;
+}
+
+.illustrationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* --- BUTTONS (Using var(--font-accent) / Bebas) --- */
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btnOutline,
+.btnSolid,
+.btnOutlineDark,
+.btnSolidDark {
+  font-family: var(--font-accent);
+  padding: 8px 30px;
+  border-radius: 100px; /* Matches Hero and Header pill-shape */
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* DARK BG BUTTONS */
+.btnOutline {
+  background: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+}
+.btnOutline:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btnSolid {
+  background: #fff;
+  border: 1.5px solid #fff;
+  color: #000;
+}
+
+/* LIGHT BG BUTTONS */
+.btnOutlineDark {
+  background: transparent;
+  border: 1.5px solid #000;
+  color: #000;
+}
+.btnOutlineDark:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btnSolidDark {
+  background: #000;
+  border: 1.5px solid #000;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .splitBlock,
+  .reverseBlock {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .imageContent {
+    width: 100%;
+    aspect-ratio: 4/3;
+  }
+  .textContent {
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+}

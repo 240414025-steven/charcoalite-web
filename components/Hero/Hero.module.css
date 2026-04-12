@@ -1,69 +1,132 @@
-.heroWrapper {
-  min-height: 100vh;
-  display: grid;
-  /* Split the screen: 60% for text, 40% for the image */
-  grid-template-columns: 1.5fr 1fr;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px 40px;
-  padding: 5% 5%;
-  background-color: var(--charcoal-black);
+  background: url("/background.png") no-repeat center center/cover;
+  padding: 0 5%;
+  overflow: hidden;
 }
 
-.title {
-  grid-column: 1;
-  text-align: left;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.mainTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 6.5rem);
   color: white;
+  text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  letter-spacing: 1.5px;
+  line-height: 0.85;
+  margin-bottom: 0.6rem;
+  width: 100%;
+  white-space: nowrap;
 }
 
-.title span {
+.brandAccent {
   color: var(--ember-orange);
 }
 
-.subtitle {
-  grid-column: 1;
+.contentBlock {
+  width: 100%;
+  /* Tweak this value slightly if the paragraph ends too early or late 
+     compared to the 'E' in CHARCOALITE */
+  max-width: 980px;
   text-align: left;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--text-muted);
+  margin-top: 0;
+  display: block;
 }
 
-.buttonList {
-  grid-column: 1;
+.subtitle {
+  font-family: var(--font-accent);
+  float: left;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: white;
+  line-height: 0.7;
+  margin-right: 15px;
+  /* Squeezes the text wrap under the subtitle */
+  margin-bottom: -8px;
+  margin-top: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  /* This ensures the text hits the right edge of the contentBlock */
+  text-align: justify;
+  /* Aligns first line of paragraph with top of subtitle */
+  margin-top: -10px;
+  padding-top: 0;
+}
+
+/* Clearfix for the float */
+.contentBlock::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.buttonGroup {
   display: flex;
   gap: 15px;
+  margin-top: 25px;
+  clear: both;
+  text-decoration: none;
 }
 
-.ctaButton {
-  background-color: var(--ember-orange);
-  border: 1px solid var(--ember-orange);
+.heroBtn {
+  font-family: var(--font-accent);
+  background: transparent;
+  border: 1.5px solid white;
   color: white;
-  padding: 0.8rem 2rem;
-  font-weight: bold;
+  padding: 6px 25px;
+  border-radius: 100px;
+  font-size: 1rem;
+  letter-spacing: 1px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.secondaryButton {
-  background-color: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 0.8rem 2rem;
-  font-weight: bold;
-  cursor: pointer;
+.heroBtn:hover {
+  background: white;
+  color: black;
 }
 
-.imgWrapper {
-  grid-row: span 3 / span 3;
-  grid-column-start: 2;
-  grid-row-start: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.productImg {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 3rem;
+    white-space: normal;
+  }
+  .contentBlock {
+    max-width: 100%;
+  }
+  .subtitle {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1;
+  }
+  .paragraph {
+    text-align: center;
+    margin-top: 0;
+  }
+  .buttonGroup {
+    justify-content: center;
+  }
 }

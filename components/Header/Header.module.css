@@ -1,0 +1,68 @@
+.header {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* TIGHTENED PADDING: 4px top/bottom makes it thin */
+  padding: 4px 24px;
+
+  background: rgba(30, 30, 30, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid var(--ash-grey);
+  border-radius: 100px;
+  z-index: 9999;
+
+  /* Ensure no extra height is creeping in */
+  height: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  /* Removed transform: scale(1.3) as it pushes the header boundaries */
+  text-decoration: none;
+}
+
+.logoStyle {
+  /* Control the size here instead of scaling the container */
+  width: auto;
+  height: 32px;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.navLink {
+  font-family: var(--font-bebas), sans-serif;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem; /* Reduced from 1.1rem to keep the pill thin */
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.quoteButton {
+  font-family: var(--font-bebas), sans-serif;
+  background-color: var(--ember-orange);
+  color: white;
+  /* Tighter vertical padding */
+  padding: 4px 16px;
+  border-radius: 50px;
+  border: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
