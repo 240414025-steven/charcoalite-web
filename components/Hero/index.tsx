@@ -12,7 +12,7 @@ export default function Hero() {
         {/* CONTENT WRAPPER */}
         <div className={styles.contentBlock}>
           {/* FLOAT THE SUBTITLE TO THE LEFT */}
-          <h2 className={styles.subtitle}>BIO CHARCOAL</h2>
+          <h1 className={styles.subtitle}>BIO CHARCOAL</h1>
 
           <p className={styles.paragraph}>
             We transform everyday coconut waste into reliable, eco-friendly fuel
