@@ -20,10 +20,12 @@ export default function Footer() {
             <div className={styles.linksColumn}>
               <h4 className={styles.columnTitle}>INDUSTRIES</h4>
               <ul className={styles.linksList}>
-                <li>AI & TECH</li>
-                <li>CLIMATE TECH</li>
-                <li>CYBERSECURITY</li>
+                <li>Renewable Energy / Alternative Energy</li>
+                <li>Waste Management & Circular Economy</li>
+                <li>Manufacturing / Processing</li>
                 <li>CLEAN ENERGY</li>
+                <li>Food & Cooking Fuel</li>
+                <li>Commercial & SME Support</li>
               </ul>
             </div>
             <div className={styles.linksColumn}>
@@ -38,7 +40,7 @@ export default function Footer() {
             <div className={styles.linksColumn}>
               <h4 className={styles.columnTitle}>CONNECT</h4>
               <ul className={styles.linksList}>
-                <li>FEEDBACK</li>
+                <li>TIK TOK</li>
                 <li>X/TWITTER</li>
                 <li>INSTAGRAM</li>
                 <li>LINKEDIN</li>
@@ -83,19 +85,21 @@ export default function Footer() {
 
             {/* Right Side: Logo + Wrapped Text */}
             <div className={styles.logoAndTextWrap}>
-              <div className={styles.logoWrapper}>
-                <Image
-                  src="/logo.png"
-                  alt="Charcoalite Logo"
-                  width={60}
-                  height={60}
-                  className={styles.logoImage}
-                />
+              <div className={styles.logoAndTextWrap}>
+                <div className={styles.imageWrapper}>
+                  <Image
+                    src="/logo.png"
+                    alt="Charcoalite Logo"
+                    width={100} // Increased size to make the wrap more visible
+                    height={100}
+                    className={styles.logoImage}
+                  />
+                </div>
+                <p className={styles.wrappedTextParagraph}>
+                  LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. NISI
+                  CURSUS ULTRICIES IMPERDIET, METUS QUAM LUCTUS LIGULA.
+                </p>
               </div>
-              <p className={styles.wrappedTextParagraph}>
-                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. NISI
-                CURSUS ULTRICIES IMPERDIET, METUS QUAM LUCTUS LIGULA.
-              </p>
             </div>
           </div>
 
