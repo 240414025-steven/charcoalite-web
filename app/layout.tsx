@@ -39,7 +39,6 @@ export default function RootLayout({
       <body className="bg-charcoal text-white antialiased">
         <Header />
         <main className="min-h-screen">{children}</main>
-        <Footer />
       </body>
     </html>
   );
