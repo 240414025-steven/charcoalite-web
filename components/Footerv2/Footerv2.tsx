@@ -78,37 +78,20 @@ export default function Footer() {
         {/* BOTTOM SECTION: All items inside the gradient block */}
         <div className={styles.bottomGradientSection}>
           <div className={styles.bottomFlexContainer}>
-            {/* Left Side: Massive Title */}
+            {/* Left Side: Massive Title remains, right side is now empty */}
             <div className={styles.massiveTitleWrapper}>
               <h1 className={styles.massiveTitle}>CHARCOALITE</h1>
-            </div>
-
-            {/* Right Side: Logo + Wrapped Text */}
-            <div className={styles.logoAndTextWrap}>
-              <div className={styles.logoAndTextWrap}>
-                <div className={styles.imageWrapper}>
-                  <Image
-                    src="/logo.png"
-                    alt="Charcoalite Logo"
-                    width={100} // Increased size to make the wrap more visible
-                    height={100}
-                    className={styles.logoImage}
-                  />
-                </div>
-                <p className={styles.wrappedTextParagraph}>
-                  LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. NISI
-                  CURSUS ULTRICIES IMPERDIET, METUS QUAM LUCTUS LIGULA.
-                </p>
-              </div>
             </div>
           </div>
 
           {/* Legal Line: Anchored to the bottom-left inside gradient */}
           <div className={styles.legalLineWrapper}>
             <p className={styles.legalLine}>
-              © 2026 Charcoalite. All Rights Reserved. &nbsp;&nbsp; Cookie
-              Preferences &nbsp;&nbsp; Privacy Policy &nbsp;&nbsp; Site Credits
+              © 2026 Charcoalite Bara Nusantara. All Rights Reserved.
             </p>
+            <p className={styles.legalLine}>Cookie Preferences</p>
+            <p className={styles.legalLine}> Privacy Policy</p>
+            <p className={styles.legalLine}>Site Credits</p>
           </div>
         </div>
       </div>

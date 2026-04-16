@@ -3,7 +3,7 @@ import { DM_Sans, Bebas_Neue } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/Footerv2/Footerv2";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -39,6 +39,7 @@ export default function RootLayout({
       <body className="bg-charcoal text-white antialiased">
         <Header />
         <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
