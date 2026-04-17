@@ -73,7 +73,7 @@
   width: 100%;
   max-width: 320px;
   height: 325px;
-  background: rgba(54, 56, 53, 0.95); /* Darker olive/charcoal background */
+  background: rgba(255, 255, 255, 0.05);
   padding: 1vh 24px;
   border-radius: 12px;
   display: flex;
@@ -112,8 +112,11 @@
   border: 1px solid rgba(255, 255, 255, 0.3); /* Defined borders from your image */
   border-radius: 6px;
   padding: 10px 14px;
+  max-width: 275px;
+  min-width: 275px;
   color: white;
   font-size: 0.9rem;
+  resize: none;
 }
 
 .formInput::placeholder,

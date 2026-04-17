@@ -3,7 +3,7 @@ import styles from "./Footerv2.module.css";
 
 export default function Footer() {
   return (
-    <footer className={styles.footerContainer}>
+    <footer id="footer" className={styles.footerContainer}>
       <div className={styles.contentWrapper}>
         {/* TOP SECTION: Links Grid & Feedback Form */}
         <div className={styles.topSection}>

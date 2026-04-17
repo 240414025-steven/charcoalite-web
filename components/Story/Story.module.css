@@ -98,6 +98,7 @@
   background: transparent;
   border: 1.5px solid #fff;
   color: #fff;
+  text-decoration: none;
 }
 .btnOutline:hover {
   background: #fff;
@@ -109,6 +110,7 @@
   background: #fff;
   border: 1.5px solid #fff;
   color: #000;
+  text-decoration: none;
 }
 
 /* LIGHT BG BUTTONS */
@@ -116,6 +118,7 @@
   background: transparent;
   border: 1.5px solid #000;
   color: #000;
+  text-decoration: none;
 }
 .btnOutlineDark:hover {
   background: #000;
@@ -127,6 +130,7 @@
   background: #000;
   border: 1.5px solid #000;
   color: #fff;
+  text-decoration: none;
 }
 
 .btnSolidDark:hover {

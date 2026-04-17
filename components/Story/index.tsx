@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Story.module.css";
 
 export default function Story() {
@@ -25,8 +26,12 @@ export default function Story() {
             it a practical and sustainable fuel choice.
           </p>
           <div className={styles.buttonGroup}>
-            <button className={styles.btnOutlineDark}>Learn more</button>
-            <button className={styles.btnSolidDark}>Buy our product</button>
+            <Link href="#" className={styles.btnOutlineDark}>
+              Learn more
+            </Link>
+            <Link href="/Pricelist" className={styles.btnSolidDark}>
+              Buy our product
+            </Link>
           </div>
         </div>
       </div>

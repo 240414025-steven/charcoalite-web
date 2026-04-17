@@ -1,0 +1,145 @@
+.lineupSection {
+  background-color: #000;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 5%;
+  color: white;
+}
+
+.sectionTitle {
+  position: absolute;
+  top: 4vh;
+  left: 5%;
+  font-family: var(--font-accent);
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5vh; /* Space for the title */
+}
+
+.lineupWrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 2vw; /* Tightened gap to allow larger images */
+  flex: 0 1 auto;
+}
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  margin-top: 1vh;
+}
+
+/* --- SCALED UP IMAGES --- */
+/* Heights tuned to hit the max limit of 50vh minus title/labels */
+.bagSmall {
+  height: 24vh;
+  width: auto;
+}
+.bagMed {
+  height: 28vh;
+  width: auto;
+}
+.bagLarge {
+  height: 32vh;
+  width: auto;
+}
+.bagCustom {
+  height: 36vh;
+  width: auto;
+}
+
+/* --- TIGHTENED CTA COLUMN --- */
+.ctaColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5vh; /* Tight gap between Or and Blocks */
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 3vw;
+}
+
+.ctaGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+
+.ctaText {
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.divider {
+  font-family: var(--font-main);
+  font-style: italic;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.outlineBtn {
+  border: 1.5px solid white;
+  border-radius: 50px;
+  padding: 6px 30px;
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.outlineBtn:hover {
+  background: white;
+  color: black;
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 425px) {
+  .lineupSection {
+    height: auto;
+    padding: 60px 5%;
+  }
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .sectionTitle {
+    position: relative;
+    left: 0;
+    margin-bottom: 20px;
+  }
+  .ctaColumn {
+    border: none;
+    padding: 0;
+  }
+  .bagSmall,
+  .bagMed,
+  .bagLarge,
+  .bagCustom {
+    height: 200px;
+  }
+}

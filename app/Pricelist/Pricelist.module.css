@@ -1,0 +1,223 @@
+.pageContainer {
+  background-color: var(--charcoal-black);
+  min-height: 100vh;
+  color: white;
+}
+
+/* --- Hero Section Fix --- */
+.heroSection {
+  position: relative;
+  height: 25vh; /* Adjusted height for better balance */
+  width: 100%; /* Ensures it fills the container width */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.heroImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: 25% 10%; /* Crop to top-left */
+  width: 100% !important;
+  height: 100% !important;
+  transform: scale(1.1);
+}
+
+.fadeOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--charcoal-black) 100%
+  );
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  max-width: 1300px; /* Aligns text with the cards below */
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center; /* Vertically centers the title in the hero */
+}
+
+.pageTitle {
+  font-family: var(--font-accent);
+  font-size: clamp(2.5rem, 7vw, 4.6rem);
+  text-transform: uppercase;
+  margin: 0;
+  color: white;
+  letter-spacing: -1px;
+}
+
+/* --- Grid --- */
+.productSection {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards wide */
+  gap: 25px;
+}
+
+/* --- Card Styling --- */
+.productCard {
+  background: #262626;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.cardTop {
+  /* background-color: #d9d9d9; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* REMOVED PADDING to hit the edges */
+  padding: 0;
+  gap: 0; /* Removed gap so gallery touches the bottom of the image */
+  overflow: hidden; /* Ensures image doesn't bleed past border-radius */
+}
+
+.portraitImageContainer {
+  position: relative;
+  width: 100%; /* Spans full width of the card */
+  aspect-ratio: 1 / 1; /* Keeping your square aspect ratio */
+}
+
+.productImg {
+  object-fit: cover;
+}
+
+.imageGallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.galleryItem {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.galleryImg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.galleryItem:hover {
+  transform: scale(1.1);
+}
+
+/* --- Card Bottom Section --- */
+.cardBottom {
+  padding: 10px 10px;
+  background-color: #262626;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cardLabel {
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 1000;
+}
+
+.cardDescription {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  text-wrap: pretty;
+}
+
+.cardPrice {
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.buyButton {
+  margin-top: auto; /* Keeps it at the bottom of the card */
+  background: white;
+  color: black;
+  border: none;
+
+  /* Use a high pixel value for border-radius to ensure a pill shape */
+  border-radius: 50px;
+
+  /* Ensure it takes up the full width of the card's inner padding */
+  width: 100%;
+
+  padding: 12px 24px;
+
+  font-family: var(--font-accent); /* Anton / Bebas Neue */
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buyButton:hover {
+  background: #f0f0f0;
+  transform: scale(1.02);
+}
+
+.buyButton:hover {
+  transform: scale(1.02);
+  background: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+}

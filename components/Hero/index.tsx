@@ -26,7 +26,7 @@ export default function Hero() {
             <a className={styles.heroBtn} href="#about">
               ABOUT US
             </a>
-            <a className={styles.heroBtn} href="/contact">
+            <a className={styles.heroBtn} href="#footer">
               CONTACT
             </a>
           </div>
