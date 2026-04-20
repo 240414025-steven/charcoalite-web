@@ -9,41 +9,42 @@ export default function Footer() {
         <div className={styles.topSection}>
           <div className={styles.linksGrid}>
             <div className={styles.linksColumn}>
-              <h4 className={styles.columnTitle}>EXPERTISE</h4>
+              <h4 className={styles.columnTitle}>NAVIGATE</h4>
               <ul className={styles.linksList}>
-                <li>MEDIA RELATIONS</li>
-                <li>STRATEGIC COMMS</li>
-                <li>THOUGHT LEADERSHIP</li>
-                <li>CONTENT DEV</li>
+                <a href="/Pricelist">PRICELIST</a>
+                <a href="">ABOUT</a>
+                <a href="">CERTIFICATE</a>
+                <a href="">CONTENT DEV</a>
               </ul>
             </div>
             <div className={styles.linksColumn}>
               <h4 className={styles.columnTitle}>INDUSTRIES</h4>
               <ul className={styles.linksList}>
-                <li>Renewable Energy / Alternative Energy</li>
-                <li>Waste Management & Circular Economy</li>
-                <li>Manufacturing / Processing</li>
-                <li>CLEAN ENERGY</li>
-                <li>Food & Cooking Fuel</li>
-                <li>Commercial & SME Support</li>
+                <a href="">Renewable Energy / Alternative Energy</a>
+                <a href="">Waste Management & Circular Economy</a>
+                <a href="">Manufacturing / Processing</a>
+                <a href="">CLEAN ENERGY</a>
+                <a href="">Food & Cooking Fuel</a>
+                <a href="">Commercial & SME Support</a>
               </ul>
             </div>
             <div className={styles.linksColumn}>
-              <h4 className={styles.columnTitle}>INFO</h4>
+              <h4 className={styles.columnTitle}>OFFICIAL ONLINE STORE</h4>
               <ul className={styles.linksList}>
-                <li>WORK</li>
-                <li>ABOUT</li>
-                <li>CAREERS</li>
-                <li>GET IN TOUCH</li>
+                <a href="">Shopee</a>
+                <a href="">Tokopedia</a>
+                <a href="">Careers</a>
+                <a href="">Certificate</a>
               </ul>
             </div>
             <div className={styles.linksColumn}>
               <h4 className={styles.columnTitle}>CONNECT</h4>
               <ul className={styles.linksList}>
-                <li>TIK TOK</li>
-                <li>X/TWITTER</li>
-                <li>INSTAGRAM</li>
-                <li>LINKEDIN</li>
+                <a href="">TIK TOK</a>
+                <a href="">X/TWITTER</a>
+                <a href="">INSTAGRAM</a>
+                <a href="">LINKEDIN</a>
+                <a href="">GMAIL</a>
               </ul>
             </div>
           </div>

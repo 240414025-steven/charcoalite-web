@@ -49,11 +49,14 @@
 
 .linksList {
   list-style: none;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
-.linksList li {
+.linksList a {
   font-family: var(--font-accent);
   font-size: 0.85rem; /* Small list text on single screen fit */
   letter-spacing: 1px;
@@ -62,9 +65,10 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-.linksList li:hover {
+.linksList a:hover {
   color: #fff;
 }
 

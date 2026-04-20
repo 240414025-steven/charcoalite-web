@@ -1,0 +1,101 @@
+.anatomySection {
+  display: flex;
+  height: 100vh; /* Full screen height */
+  width: 100%;
+  background-color: var(--charcoal-black); /* Dark charcoal grey background */
+  overflow: hidden;
+}
+
+/* --- Left Side: White Panel --- */
+.imageSide {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.productWrapper {
+  position: relative;
+  width: 100%; /* Adjusted for 100vh scaling */
+  height: 100%;
+}
+
+.cubeImg {
+  object-fit: cover;
+  /* Stronger drop shadow for depth on white background */
+  filter: drop-shadow(30px 40px 50px rgba(0, 0, 0, 0.2));
+}
+
+/* --- Right Side: Content Panel --- */
+.contentSide {
+  flex: 1;
+  padding: 8vh 6%; /* Balanced padding for full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #ffffff;
+}
+
+.mainTitle {
+  font-family: var(--font-accent); /* Use your Anton/Bebas font */
+  font-size: clamp(3rem, 8vh, 5rem);
+  color: #e85a4f; /* The muted orange-red from your mockup */
+  margin: 0 0 1vh 0;
+  letter-spacing: -2px;
+  line-height: 0.9;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature h3 {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 0.2vh;
+  color: #ffffff;
+}
+
+.feature p {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85); /* Slightly muted for readability */
+  max-width: 90%;
+  text-align: justify;
+}
+
+/* --- Bottom Tags --- */
+.footerTags {
+  margin-top: auto; /* Pushes to bottom */
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0.7;
+  padding-top: 4vh;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .anatomySection {
+    height: auto;
+    flex-direction: column;
+  }
+  .imageSide {
+    height: 50vh;
+    padding: 40px;
+  }
+  .contentSide {
+    padding: 60px 5%;
+  }
+  .mainTitle {
+    font-size: 3rem;
+  }
+}
